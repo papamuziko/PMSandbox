@@ -10,8 +10,8 @@
 
 @interface NSString (PMCrypt)
 
-+ (NSString *)randomKey;
-
 - (NSString *)md5;
+
+- (NSString *)decrypt_DES:(NSString *)key andIV:(NSString *)iv;
 
 @end

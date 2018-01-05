@@ -20,7 +20,7 @@
 
 - (BOOL)isSameDate:(NSDate *)date withPrecision:(PMNSDateSamePrecision)precision
 {
-    if(nil == date) {
+    if((nil == date) || (nil == self)) {
         return NO;
     }
     

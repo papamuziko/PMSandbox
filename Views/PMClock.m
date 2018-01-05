@@ -105,6 +105,10 @@
 
 - (void)_updateLayout
 {
+    if (nil == self.date) {
+        return;
+    }
+    
     NSCalendar *cal = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSDateComponents *dc = [cal components:(NSCalendarUnitHour | NSCalendarUnitMinute) fromDate:self.date];
     
